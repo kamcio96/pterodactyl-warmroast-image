@@ -18,5 +18,7 @@ ENV         USER=container HOME=/home/container
 WORKDIR     /home/container
 
 COPY        ./entrypoint.sh /entrypoint.sh
+COPY        --chown=container:container ./warmroast /warmroast/
 
+ENV         PATH="/warmroast/:${PATH}"
 CMD         ["/bin/bash", "/entrypoint.sh"]
