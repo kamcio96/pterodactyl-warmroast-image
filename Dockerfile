@@ -3,7 +3,7 @@
 # Environment: Java (glibc support)
 # Minimum Panel Version: 0.6.0
 # ----------------------------------
-FROM        adoptopenjdk/openjdk8-openj9:debian
+FROM        openjdk:8u242-jdk-buster
 
 RUN apt-get update -y \
  && apt-get install -y curl ca-certificates openssl git tar sqlite fontconfig tzdata iproute2 procps \
